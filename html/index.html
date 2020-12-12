@@ -1,22 +1,20 @@
 <html>
 <head>
-	<link href="./../css/index.css" rel="stylesheet" type="text/css"/>
+	<link href="./../css/login.css" rel="stylesheet" style="text/css">
 </head>
-
 <body>
-	<div id="titile"> <h1>期末作业，留言板系统</h1> </div>
-	
+	<h1>请登录之后，使用相关服务!</h1>
+	<div style="width:100%;height:300px;">
+	<h2 style="text-align:center;">登录页面</h2>
 	<div id="content">
-		<p>welcome xxx</p>
-		<div class="box">
-			<a href="./login.html">登录</a>
-			<a href="./registered.html">注册</a>
-		</div>
-		<div class="box"><a href="./addNewMessage.html">留言板留言</a></div>
-		<div class="box"><a href="">查看所有留言</a></div>
-		<div class="box"><a href="">删除自己的留言</a></div>
-		<div class="box"><a href="">修改自己的留言</a></div>
+		<form action="./../serverPhp/login.php" method="post">
+			<div> 用户名:<input type="text" name="username"></div>
+			<div> 密码:<input type="password" name="password"></div>
+			<div><input type="submit" value="登录"></div>
+		</form>
+	
 	</div>
-	<a href="./admin.php">管理员登录</a>
+	</div>
+<a href="./registered.html">没有账号，去注册!</a>
 </body>
 </html>

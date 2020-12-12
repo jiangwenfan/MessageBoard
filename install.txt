@@ -4,3 +4,7 @@ create table ptest2(id int not null primary key auto_increment,name char(20) not
 
 
 insert into ptest2 values (null,'jwf2','admin1234','helloTest2','this is test','192.168.1.3','0');
+
+
+//创建用户表
+create table puser(id int not null primary key auto_increment,name char(20) not null,password char(20) not null,email char(40)  null,backup char(40) null)character set=utf8;

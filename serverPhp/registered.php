@@ -9,15 +9,22 @@ $email = $_POST['email'];
 //echo $name.$password.$email;
 
 //插入mysql
-$name = $name.",";
-$password = $password.",";
-$email = $email.",";
+//$name = $name.",";
+//$password = $password.",";
+//$email = $email.",";
 
 //test input
-$sql = "insert into ptest2 values (null,".$name.$password."'tem','tem','0','0');";
-echo $sql;
+$sql = "insert into puser values (null,'".$name."',"."'".$password."',"."'".$email."',null);";
 
-pInsert($sql);
+echo $sql;
+//div的font-size没有生效
+$info = '<h3 style="text-align:center;">注册成功!</h3>
+<div style="font-szie:60px;">
+<a href="./../html/login.html">返回登录</a>
+</div>
+';
+
+pInsert($sql,$info);
 
 
 ?>
