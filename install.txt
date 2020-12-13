@@ -8,3 +8,17 @@ insert into ptest2 values (null,'jwf2','admin1234','helloTest2','this is test','
 
 //创建用户表
 create table puser(id int not null primary key auto_increment,name char(20) not null,password char(20) not null,email char(40)  null,backup char(40) null)character set=utf8;
+
+//创建留言内容表
+
+create table pcontent(id int not null primary key auto_increment,title char(20) not null,content char(60) not null,backup char(40) null)character set=utf8;
+
+//修改字段值:
+update pcontent set backup="1" where id =2;
+
+//删除一条记录
+delete from pcontent where id=6;
+
+
+----------------------
+modify.php

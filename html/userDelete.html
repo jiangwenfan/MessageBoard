@@ -1,0 +1,21 @@
+<html>
+<head>
+	<link href="./../css/login.css" rel="stylesheet" style="text/css">
+</head>
+<body>
+	<!--根据自己的标题删除留言,目前只能但愿不要用重复的title了 -->
+	<h1>删除自己的留言</h1>
+	<div style="width:100%;height:300px;">
+	<h2 style="text-align:center;">删除页面</h2>
+	<div id="content">
+		<form action="./../serverPhp/userDelete.php" method="post">
+			<div> title:<input type="text" name="title"></div>
+			<!-- <div> content:<input type="text" name="content"></div> -->
+			<div><input type="submit" value="提交"></div>
+		</form>
+	
+	</div>
+	</div>
+<!-- <a href="./registered.html">没有账号，去注册!</a> -->
+</body>
+</html>

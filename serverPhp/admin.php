@@ -1,7 +1,9 @@
 <?php
 include "mysqlMethod.php";
+header("Content-Type: text/html;charset=utf-8");
 //现主管理员和用户都在同一个表中，只有一个管理员所以直接写死。
 //$adminUser = $_POST['username'];
+//$adminId = $_POST['id'];
 $adminPassword = $_POST['password'];
 //echo $adminPassword;
 
@@ -32,20 +34,24 @@ echo '</div>';
 echo '</div>';
 
 //取出数据
+$sql2 = "select * from pcontent where backup='0'";
+pSelectAllRadio($sql2);
 
+//废弃代码。。
 //生成显示数据
-echo '<div style="width:700px;height:100%;borde:4px;">';
+//echo '<div style="width:700px;height:100%;borde:4px;">';
 //echo '<div style="width:700px;height:100%;borde:4px;background-color:green;">';
+ /*
 echo '
 <form action="" method="post">
 	<div> 
-		
+		<p>123:</p>	
 		通过:<input type="radio" name="st" value="0">
 		不通过:<input type="radio" name="st" value="1">
 	</div>
 </form>
-';
-echo '</div>';
+';*/
+//echo '</div>';
 }
 else{
 	echo "登录失败!";
